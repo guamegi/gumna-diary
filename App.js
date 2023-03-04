@@ -1,8 +1,11 @@
 import { NavigationContainer } from "@react-navigation/native";
-import React, { useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import Realm from "realm";
-import AppLoading from "expo-app-loading";
+// import AppLoading from "expo-app-loading";
+import * as SplashScreen from "expo-splash-screen";
 import Navigator from "./navigator";
+
+SplashScreen.preventAutoHideAsync();
 
 const FeelingSchema = {
   name: "Feeling",
@@ -21,17 +24,27 @@ export default function App() {
       path: "gumnaDiaryDB",
       schema: [FeelingSchema],
     });
-    // console.log("realm:", realm);
+    console.log("realm:", realm);
   };
-  const onFinish = () => setReady(true);
+
+  useEffect(() => {
+    async function prepare() {
+      try {
+        startLoading();
+        await new Promise((resolve) => setTimeout(resolve, 2000));
+      } catch (e) {
+        console.warn(e);
+      } finally {
+        await SplashScreen.hideAsync();
+        setReady(true);
+      }
+    }
+
+    prepare();
+  }, []);
+
   if (!ready) {
-    return (
-      <AppLoading
-        startAsync={startLoading}
-        onFinish={onFinish}
-        onError={console.error}
-      />
-    );
+    return null;
   }
   return (
     <NavigationContainer>
