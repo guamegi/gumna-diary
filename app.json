@@ -3,9 +3,13 @@
     "name": "gumna-diary",
     "slug": "gumna-diary",
     "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
-    ]
+    "assetBundlePatterns": ["**/*"],
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#000000"
+    }
   },
   "name": "gumna-diary"
 }
