@@ -17,6 +17,7 @@ const View = styled.View`
   background-color: ${colors.bgColor};
   justify-content: center;
   align-items: center;
+  width: 100%;
 `;
 const Title = styled.Text`
   color: ${colors.textColor};
