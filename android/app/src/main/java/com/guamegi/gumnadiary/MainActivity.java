@@ -1,4 +1,4 @@
-package com.gumnadiary;
+package com.guamegi.gumnadiary;
 
 import android.os.Build;
 import android.os.Bundle;

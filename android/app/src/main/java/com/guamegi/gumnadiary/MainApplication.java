@@ -1,4 +1,4 @@
-package com.gumnadiary;
+package com.guamegi.gumnadiary;
 
 import android.app.Application;
 import android.content.res.Configuration;

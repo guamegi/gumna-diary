@@ -3,17 +3,25 @@
     "name": "gumna-diary",
     "slug": "gumna-diary",
     "version": "1.0.0",
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "cover",
       "backgroundColor": "#000000"
+    },
+    "android": {
+      "package": "com.guamegi.gumnadiary"
+    },
+    "ios": {
+      "bundleIdentifier": "com.guamegi.gumnadiary"
     }
   },
   "name": "gumna-diary",
   "react-native-google-mobile-ads": {
-    "android_app_id": "ca-app-pub-3940256099942544/6300978111",
-    "ios_app_id": "ca-app-pub-3940256099942544/2934735716"
+    "android_app_id": "ca-app-pub-7965287185586363~7386673414",
+    "ios_app_id": "ca-app-pub-7965287185586363~6281491218"
   }
 }

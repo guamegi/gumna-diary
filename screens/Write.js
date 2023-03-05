@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Alert } from "react-native";
-import { InterstitialAd, TestIds } from "react-native-google-mobile-ads";
 import styled from "styled-components/native";
 import colors from "../colors";
 import { useDB } from "../context";
