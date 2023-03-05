@@ -4,18 +4,26 @@ import { Ionicons } from "@expo/vector-icons";
 import colors from "../colors";
 import { useDB } from "../context";
 import { FlatList, LayoutAnimation, TouchableOpacity } from "react-native";
+import {
+  BannerAd,
+  BannerAdSize,
+  TestIds,
+} from "react-native-google-mobile-ads";
 
 const View = styled.View`
   flex: 1;
   padding: 0px 30px;
   padding-top: 100px;
   background-color: ${colors.bgColor};
+  justify-content: center;
+  align-items: center;
 `;
 const Title = styled.Text`
   color: ${colors.textColor};
   font-size: 38px;
   font-weight: 500;
-  margin-bottom: 100px;
+  width: 100%;
+  margin-bottom: 10px;
 `;
 const Btn = styled.TouchableOpacity`
   position: absolute;
@@ -75,7 +83,9 @@ const Home = ({ navigation: { navigate } }) => {
   return (
     <View>
       <Title>My journal</Title>
+      <BannerAd sizes={[BannerAdSize.FULL_BANNER]} unitId={TestIds.BANNER} />
       <FlatList
+        style={{ width: "100%", marginVertical: 10 }}
         data={feelings}
         contentContainerStyle={{ paddingVertical: 10 }}
         ItemSeparatorComponent={Separator}

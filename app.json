@@ -11,5 +11,9 @@
       "backgroundColor": "#000000"
     }
   },
-  "name": "gumna-diary"
+  "name": "gumna-diary",
+  "react-native-google-mobile-ads": {
+    "android_app_id": "ca-app-pub-3940256099942544~6300978111",
+    "ios_app_id": "ca-app-pub-3940256099942544~2934735716"
+  }
 }

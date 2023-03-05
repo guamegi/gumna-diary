@@ -94,6 +94,7 @@ const Write = ({ navigation: { goBack } }) => {
       <TextInput
         returnKeyType="done"
         onSubmitEditing={onSubmit}
+        autoCapitalize="none"
         onChangeText={onChangeText}
         value={feelings}
         placeholder="Write your feelings..."
